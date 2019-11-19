@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         //      如果能取得accessToken的話,就去做取得內容與資料,但其實accessToken沒有被用到,所以會有黃色的提示,顯示accessToken沒有被使用
         //        建立在viewDidLoad內，意義是打開這畫面就先檢查有沒有登入
         //        有登入記錄的話,就直接使用資料
+//        
         if let accessToken = AccessToken.current {
             Profile.loadCurrentProfile { (profile, error) in
                 if let profile = profile {
